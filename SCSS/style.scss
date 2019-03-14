@@ -1,0 +1,62 @@
+@import'variables';
+@import'nav';
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color: $mainColour;
+}
+.button{
+	background-color: $mainColour;
+	color:complement($mainColour);
+}
+.p{
+	color: $textColour;
+}
+.h4{
+	border: $borderSize solid $mainColour;
+}
+
+
+@for $i from 1 through $columns{
+	.col#{$i}{
+		width: $columnWidth * $i;
+
+	}
+}
+
+#headerNav{
+	background-color: $mainColour;
+	ul{
+		li{
+			color:blue;
+		}
+	}
+	p{
+		width: 500px;
+		color: $textColour
+	}
+}
+
+#footerNav ul li{
+
+			color: green;
+	
+}	
+
+
+
+h1{
+	@include colourLayout;
+	font-size: 40px;
+	text-decoration: underline;
+}
+
+h5{
+	@include colourLayout;
+}
+.button{
+	@include colourLayout;
+}
+
